@@ -66,11 +66,13 @@ const ProductScreen = () => {
                                     Quantity
                                 </Col>
                                 <Col>
+                                 {product.countInStock > 0?
                                     <select>
                                         {[...Array(product.countInStock).keys()].map((x) => (
                                             <option key={x+1}>{x+1}</option>
                                         ))}
-                                    </select>
+                                    </select>:null
+                                 }
                                 </Col>
                             </Row>
                         </ListGroup.Item>
