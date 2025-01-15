@@ -8,7 +8,7 @@ const app = express();
 app.get("/api/products", (req, res) => {
   res.json(products);
 });
-app.get('/api/product/:id',(req,res)=>{
+app.get('/api/products/:id',(req,res)=>{
     const product = products.find(item=>item._id===req.params.id)
     res.json(product)
 })
