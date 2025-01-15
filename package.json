@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node backend/server.js",
     "client": "npm start --prefix frontend",
@@ -14,7 +15,7 @@
     "url": "git+https://github.com/alokofficial/eCommerce-v2.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alok Kumar",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alokofficial/eCommerce-v2/issues"
