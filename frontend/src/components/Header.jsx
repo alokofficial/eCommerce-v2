@@ -9,7 +9,7 @@ const Header = () => {
             <Container fluid className="mx-1">
                 
                     <Navbar.Brand >
-                        <Link to="/home">
+                        <Link to="/">
                             <img src={logo} alt="logo" className="rounded-circle" width="50px" />
                             <span className="text-uppercase fw-bold ms-2">EpoxySneak</span>
                         </Link>
