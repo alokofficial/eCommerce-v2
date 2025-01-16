@@ -8,6 +8,7 @@ import { FaRegUser } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import Loader from '../components/Loader';
 import FormContainer from '../components/FormContainer';
+import CheckoutSteps from '../components/CheckoutSteps';
 
 const LoginScreen = () => {
 
@@ -44,6 +45,7 @@ const LoginScreen = () => {
 
   return (
     <FormContainer>
+      <CheckoutSteps step1 />
       <h1>Sign In</h1>
       <Form onSubmit={submitHandler}>
         <Form.Group className='my-2' controlId='email'>
