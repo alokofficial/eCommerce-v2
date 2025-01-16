@@ -1,9 +1,10 @@
-import { LinkContainer } from 'react-router-bootstrap';
-import { Table, Button } from 'react-bootstrap';
+
+import { Table, Button, Nav } from 'react-bootstrap';
 import { FaTimes } from 'react-icons/fa';
 import Message from '../components/Message';
 import Loader from '../components/Loader';
 import { useGetOrdersQuery } from '../slices/orderApiSlice';
+import { NavLink } from 'react-router-dom';
 
 const OrderListScreen = () => {
   const { data: orders, isLoading, error } = useGetOrdersQuery();
@@ -52,11 +53,11 @@ const OrderListScreen = () => {
                   )}
                 </td>
                 <td>
-                  <LinkContainer to={`/order/${order._id}`}>
+                  <Nav.Link as={NavLink} to={`/order/${order._id}`}>
                     <Button variant='light' className='btn-sm'>
                       Details
                     </Button>
-                  </LinkContainer>
+                  </Nav.Link>
                 </td>
               </tr>
             ))}
