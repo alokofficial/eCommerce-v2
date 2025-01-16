@@ -21,7 +21,7 @@ const ProfileScreen = () => {
 
   const { data: orders, isLoading, error } = useGetMyOrdersQuery();
 
-  const [updateProfile] =
+  const [updateProfile, { isLoading: loadingUpdateProfile }] =
     useProfileMutation();
 
   useEffect(() => {
