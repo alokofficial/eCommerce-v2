@@ -4,7 +4,7 @@ import { useLocation, useNavigate, Link } from 'react-router-dom'
 import { useLoginMutation } from '../slices/userApiSlice'
 import { setCredentials } from '../slices/authSlice';
 import { Form, Button, Row, Col } from 'react-bootstrap';
-import { FaUser,FaRegUser } from 'react-icons/fa';
+import { FaRegUser } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import Loader from '../components/Loader';
 import FormContainer from '../components/FormContainer';
