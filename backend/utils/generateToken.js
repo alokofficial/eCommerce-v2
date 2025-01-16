@@ -8,7 +8,7 @@ const generateToken = (res, userId) => {
         httpOnly: true,
         secure: process.env.NODE_ENV !== "development", // set to true in production
         sameSite: "strict",
-        maxAge: 1000 * 60 * 60, // 1 hour
+        maxAge: 1000 * 60 * 60 * 24, // 24 hours
     });
 }
 
