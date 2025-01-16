@@ -1,9 +1,9 @@
 
 import { Table, Button, Nav } from 'react-bootstrap';
 import { FaTimes } from 'react-icons/fa';
-import Message from '../components/Message';
-import Loader from '../components/Loader';
-import { useGetOrdersQuery } from '../slices/orderApiSlice';
+import Message from '../../components/Message';
+import Loader from '../../components/Loader';
+import { useGetOrdersQuery } from '../../slices/ordersApiSlice';
 import { NavLink } from 'react-router-dom';
 
 const OrderListScreen = () => {

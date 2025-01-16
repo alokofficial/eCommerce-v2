@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useLocation, useNavigate, Link } from 'react-router-dom'
-import { useLoginMutation } from '../slices/userApiSlice'
+import { useLoginMutation } from '../slices/usersApiSlice'
 import { setCredentials } from '../slices/authSlice';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { FaRegUser } from 'react-icons/fa';
