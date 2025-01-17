@@ -4,11 +4,22 @@ import { NavLink } from 'react-router-dom';
 import { FaTrash, FaEdit, FaCheck, FaTimes } from 'react-icons/fa';
 import Message from '../../components/Message';
 import Loader from '../../components/Loader';
-import { useGetUsersQuery } from '../../slices/usersApiSlice';
+import { useGetUsersQuery, useDeleteUserMutation } from '../../slices/usersApiSlice';
+import { toast } from 'react-toastify';
 const UserListScreen = () => {
-  const { data: users, isLoading, error } = useGetUsersQuery();
+  const { data: users,refetch, isLoading, error } = useGetUsersQuery();
+
+  const [ deleteUser ] = useDeleteUserMutation();
   const deleteHandler = async (id) => {
-    console.log('delete');
+    if (window.confirm('Are you sure')) {
+      try {
+        await deleteUser(id);
+        toast.success('User deleted successfully');
+        refetch();
+      } catch (err) {
+        toast.error(err?.data?.message || err.error);
+      }
+    }
   };
   return (
     <>
