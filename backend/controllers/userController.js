@@ -177,6 +177,7 @@ const getUserById = asyncHandler(async (req, res) => {
  */
 const updateUser = asyncHandler(async (req, res) => {
     const user = await User.findById(req.params.id);
+    // implement later, same email check if yes so not update and also send msg
 
     if(user){
         user.name = req.body.name || user.name;
